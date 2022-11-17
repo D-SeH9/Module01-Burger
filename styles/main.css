@@ -40,9 +40,9 @@ body {
    width: 100%;
    height: 3px;
    border-radius: 1.5px;
-   background: transparent;
+   background-color: transparent;
    display: block;
 }
 .header-nav a.active::after {
-   background: #FFC725;
+   background-color: #FFC725;
 }
