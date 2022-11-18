@@ -35,8 +35,8 @@ body {
    color: #443737;
    text-decoration: none;
 }
-.header-nav::after{
-   content:none;
+.header-nav a:after {
+   content:"";
    width: 100%;
    height: 3px;
    border-radius: 1.5px;
