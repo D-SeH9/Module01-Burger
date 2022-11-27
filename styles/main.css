@@ -338,9 +338,12 @@ header {
    line-height: 24px;
 }
 .footer-list a {
-   color: #FBB731;
+   color: #DEDEDE;
    text-decoration: none;
    font-weight: 400;
+}
+.footer-list a:hover{
+   color: #FBB731;
 }
 .footer-item span {
    color: #DEDEDE;
@@ -357,6 +360,9 @@ header {
 .footer-list-tel a {
    font-size: 20px;
    font-weight: 900;
+   color: #FBB731;
+}
+.footer-list-tel a:hover {
    color: #DEDEDE;
 }
 .footer-list{
