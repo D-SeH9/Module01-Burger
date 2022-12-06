@@ -12,14 +12,17 @@
    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-   <header>
-      <div class="container">
+   <header id="header-top">
+      <div class="wrapper">
          <div class="header">
+            <div class="header-burger">
+               <button class="burger" onclick="openModal()"></button>
+            </div>
             <div class="header-item">
-               <a href="#" class="header-logo"></a>
+               <a href="index.html" class="header-logo"></a>
                <nav>
                   <ul class="header-nav">
-                     <li><a href="#">Главная</a></li>
+                     <li><a href="index.html">Главная</a></li>
                      <li><a href="#" class="active">Меню</a></li>
                      <li><a href="#">О нас</a></li>
                      <li><a href="#">Контакты</a></li>
@@ -37,7 +40,7 @@
       </div>
    </header>
    <div class="bg">
-      <div class="container">
+      <div class="wrapper">
          <ul class="breadcrumbs">
             <li><a href="#">Главная</a></li>
             <li><a href="#">Меню</a></li>
@@ -49,7 +52,7 @@
    </div>
    <main>
       <div class="banner">
-         <div class="container">
+         <div class="wrapper">
             <div class="banner-box">
                <h2 class="banner-title">
                   <span>Скидка</span>
@@ -57,12 +60,12 @@
                </h2>
                <p class="banner-text">Только при покупке 3-х и более позиций, мы дарим скидку. Акции не суммируются.
                </p>
-               <a href="#" class="banner-link">Купить сейчас</a>
+               <a href="#menu-burger" class="banner-link">Купить сейчас</a>
             </div>
          </div>
       </div>
-      <section class="menu">
-         <div class="container">
+      <section class="menu" id="menu-burger">
+         <div class="wrapper">
             <div class="menu-header">
                <h2 class="menu-title">
                   Бургеры
@@ -144,11 +147,11 @@
          </div>
       </section>
       <section class="more">
-         <div class="container">
+         <div class="wrapper">
             <div class="more-header">
                <h2 class="more-title">Дополнительно</h2>
             </div>
-            <div class="more-grid">
+            <div class="menu-grid">
                <div class="menu-grid-item">
                   <div class="menu-grid-cover">
                      <img src="images/more/more01.jpg" alt="Сэндвич">
@@ -187,7 +190,7 @@
       </section>
    </main>
    <footer class="footer">
-      <div class="container">
+      <div class="wrapper">
          <div class="footer-box">
             <div class="footer-item">
                <img class="footer-logo" src="images/logo-footer.svg" alt="Logo">
@@ -195,10 +198,18 @@
            <div class="footer-item">
                <h2>основные ссылки</h2>
                <ul class="footer-list">
-                   <li><a href="">Меню</a></li>
-                   <li><a href="">Заказ и Доставка</a></li>
-                   <li><a href="">Методы оплаты</a></li>
-                   <li><a href="">Контакты</a></li>
+                   <li><a href="menu.html">Меню</a></li>
+                   <li><a href="#">Заказ и Доставка</a></li>
+                   <li><a href="#">Методы оплаты</a></li>
+                   <li><a href="#">Контакты</a></li>
+               </ul>
+               <ul class="footer-list footer-list-tel">
+                  <li>
+                     <a href="tel:+79007871313">+ 7 900 787 13-13</a>
+                  </li>
+                  <li>
+                     <a href="tel:+79007001414">+ 7 900 700 14-14</a>
+                  </li>
                </ul>
            </div>
            <div class="footer-item">
@@ -228,5 +239,72 @@
          </div>
       </div>
   </footer>
+  <a href="#header-top" class="button-up hidden" id="btnUp">Вверх</a>
+  <div class="modal" id="modal">
+   <ul class="header-nav">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="#" class="active">Меню</a></li>
+      <li><a href="#">О нас</a></li>
+      <li><a href="#">Контакты</a></li>
+   </ul>
+   <button class="burger-class" onclick="closeModal()"></button>
+  </div>
+  <script>
+
+      // Smooth Scroll
+
+      const links = document.querySelectorAll(".banner-link");
+
+      for (const link of links) {
+         link.addEventListener("click", clickHandler);
+      }
+
+      function clickHandler(e) {
+         e.preventDefault();
+         const href = this.getAttribute("href");
+
+         document.querySelector(href).scrollIntoView({
+            behavior: "smooth"
+         });
+      }
+
+      // Button Up
+
+      window.onscroll = function(){scrollFunction()};
+
+      const upbuttons = document.querySelectorAll(".button-up");
+
+      for (const upbutton of upbuttons) {
+         upbutton.addEventListener("click", clickHandler);
+      }
+
+      function clickHandler(e) {
+         e.preventDefault();
+         const href = this.getAttribute("href");
+
+         document.querySelector(href).scrollIntoView({
+            behavior: "smooth"
+         });
+      }
+
+      function scrollFunction(){
+         if ( document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000){
+            document.getElementById('btnUp').className = 'button-up visible';
+            } else {
+               document.getElementById('btnUp').className = 'button-up hidden';
+            }
+      }
+
+       // Menu
+
+       function openModal() {
+           document.getElementById("modal").style.top = "0px";
+       }
+
+       function closeModal() {
+           document.getElementById("modal").style.top = "-400px";
+       }
+
+  </script>
 </body>
 </html>
