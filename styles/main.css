@@ -413,7 +413,7 @@ header {
 }
 .content {
    color: #FAF9F9;
-   flex: 0 0 100%;
+   flex: 0 0 580px;
    padding-top: 170px;
    padding-bottom: 170px;
 }
@@ -676,6 +676,7 @@ header {
 /* Style Index */
 
    .content {
+      flex: 0 0 100%;
       padding-bottom: 55px;
       margin-bottom: 70px;
    }
@@ -688,6 +689,7 @@ header {
    }
    .content-text {
       font-size: 14px;
+      max-width: 59vw;
    }
    .content-link, .promo a {
       padding: 17px 40px;
@@ -698,10 +700,9 @@ header {
       width: 198px;
    }
    .main img {
-      width: 64vw;
-      right: -273px;
-      top: inherit;
-      margin: 136px;
+      width: 65vw;
+      right: -175px;
+      margin: 35px;
    }
    .promo {
       padding-top: 105px;
@@ -734,6 +735,9 @@ header {
       position: absolute;
       top: -6px;
       right: 0;
+   }
+   .free {
+      font-size: 40px;
    }
 }
 @media (max-width: 567px) {
@@ -796,9 +800,13 @@ header {
 
    /* Style Index */
 
+   .container {
+      padding: 0;
+   }
    .content {
       max-width: 290px;
       margin-bottom: 111px;
+      padding-left: 15px;
    }
    .content-title span {
       font-size: 14px;
