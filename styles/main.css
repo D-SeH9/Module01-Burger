@@ -413,7 +413,7 @@ header {
 }
 .content {
    color: #FAF9F9;
-   flex: 0 0 580px;
+   flex: 0 0 100%;
    padding-top: 170px;
    padding-bottom: 170px;
 }
