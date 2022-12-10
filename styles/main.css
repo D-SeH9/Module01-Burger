@@ -689,7 +689,7 @@ header {
    }
    .content-text {
       font-size: 14px;
-      max-width: 59vw;
+      max-width: 60vw;
    }
    .content-link, .promo a {
       padding: 17px 40px;
@@ -698,11 +698,13 @@ header {
    .visual-bg {
       position: absolute;
       width: 198px;
+      margin-right: 10px;
    }
    .main img {
       width: 65vw;
-      right: -175px;
-      margin: 35px;
+      right: -260px;
+      top: inherit;
+      margin: 130px;
    }
    .promo {
       padding-top: 105px;
@@ -719,11 +721,6 @@ header {
       margin-top: 95px;
    }
 }
-@media (max-width: 750px) {
-   .visual-bg {
-      display: none;
-   }
-}
 @media (max-width: 650px) {
    .footer-box {
       position: relative;
@@ -736,8 +733,17 @@ header {
       top: -6px;
       right: 0;
    }
+   .sale {
+         font-size: 12px;
+   }
+   .cost {
+         font-size: 40px;
+   }
    .free {
-      font-size: 40px;
+         font-size: 32px;
+   }
+   .visual-bg {
+      display: none;
    }
 }
 @media (max-width: 567px) {
@@ -772,8 +778,8 @@ header {
          font-size: 16px;
    }
    .more {
-   overflow: hidden;
-   height: 420px;
+      overflow: hidden;
+      height: 420px;
    }
    .more .menu-grid {
       display: flex;
@@ -809,16 +815,16 @@ header {
       padding-left: 15px;
    }
    .content-title span {
-      font-size: 14px;
+      font-size: 3.6vw;
    }
    .content-title {
       display: block;
       max-width: 290px;
-      font-size: 58px;
-      line-height: 70px;
+      font-size: 15vw;
+      line-height: 1.1;
    }
    .content-text {
-      font-size: 13px;
+      font-size: 2.5vw;
    }
    .promo {
       padding-top: 95px;
@@ -853,14 +859,8 @@ header {
 
    /* Style Index */
 
-   .cost {
-      font-size: 55px;
-   }
    .promo .description {
       font-size: 13px;
-   }
-   .free {
-      font-size: 39px;
    }
    .promo-description {
       font-size: 13px;
