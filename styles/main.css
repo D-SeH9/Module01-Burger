@@ -606,7 +606,7 @@ header {
       position: absolute;
       right: -120px;
       top: 95px;
-  }
+   }
 }
 @media (max-width: 1000px) {
    .wrapper{
@@ -657,7 +657,15 @@ header {
    .footer-list + .footer-list-tel {
       display: block;
    }
-   
+   .main img {
+      width: 55vw;
+      right: -86px;
+      top: inherit;
+      bottom: -90px;
+   }
+   .visual-bg {
+      width: 33vw;
+   }
 }
 @media (max-width: 765px) {
    nav {
@@ -701,12 +709,6 @@ header {
       width: 198px;
       margin-right: 10px;
    }
-   .main img {
-      width: 65vw;
-      right: -260px;
-      top: inherit;
-      margin: 130px;
-   }
    .promo {
       padding-top: 105px;
    }
@@ -746,6 +748,9 @@ header {
    .visual-bg {
       display: none;
    }
+   .main img {
+      bottom: -72px;
+  }
 }
 @media (max-width: 567px) {
    .breadcrumbs a {
@@ -807,13 +812,9 @@ header {
 
    /* Style Index */
 
-   .container {
-      padding: 0;
-   }
    .content {
-      max-width: 290px;
+      max-width: 100%;
       margin-bottom: 111px;
-      padding-left: 15px;
    }
    .content-title span {
       font-size: 3.6vw;
@@ -840,6 +841,11 @@ header {
    .promo .description {
       margin: 0;
       font-size: 15px;
+   }
+   .main img {
+      width: 60vw;
+      bottom: -70px;
+      right: 0;
    }
 }
 @media (max-width: 360px) {
